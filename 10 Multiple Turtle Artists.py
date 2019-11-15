@@ -20,10 +20,15 @@ for i in range(NUM_TURTLES):
     turtle_list[i].speed(0) 
 #Give some instructions to the turtles. 
 #Option One
+line_thickness = 1
 for distance in range(1,150):
     for current_turtle in turtle_list:
+        current_turtle.pensize(line_thickness)
         current_turtle.fd(distance)
         current_turtle.right(13)
+    line_thickness += 1
+    if line_thickness > 15:
+        line_thickness = 1
 
 
 
