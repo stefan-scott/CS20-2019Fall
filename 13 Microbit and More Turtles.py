@@ -9,7 +9,7 @@ Microbit is Flat, tilted Left, or tilted right"""
     rotation = microbit.accelerometer.get_x()
     if rotation < SENSITIVITY and rotation > SENSITIVITY*-1:
         return "flat"
-    elif rotation >= SENSITIVITY
+    elif rotation >= SENSITIVITY:
         return "right"
     else:
         return "left"
