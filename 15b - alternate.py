@@ -37,17 +37,20 @@ def sweep(step):
     clear()
     for i in range(5):
         set_pixel(i,int(step/2),9)
+    #print(active_image)
 
 def clear():
+    global active_image
     active_image = ["00000:",
                     "00000:",
                     "00000:",
                     "00000:",
                     "00000" ]
-    show_image()
+    #show_image()
 counter = 0
 while True:
-    sweep(counter)
-    counter += 1
-    if counter >=10: counter = 0
-    #time.sleep(0.1)
+    for x in range(5):
+        for y in range(5):
+            set_pixel(x,y,9)
+            time.sleep(0.1)
+    clear()
